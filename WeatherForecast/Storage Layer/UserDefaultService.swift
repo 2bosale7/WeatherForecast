@@ -11,5 +11,21 @@ class UserDefaultService {
     static var sharedInstance = UserDefaultService()
     let defualts = UserDefaults.standard
     
+    var isFirstTimeUser: Bool {
+        if let _ = self.defaultCityID {
+            return false
+        }else{
+            return true
+        }
+    }
+    
+    var defaultCityID: Int? {
+        get{
+            defualts.value(forKey: "cityID") as? Int
+        }
+        set{
+            defualts.set(newValue, forKey: "cityID")
+        }
+    }
     
 }

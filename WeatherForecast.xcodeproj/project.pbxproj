@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C6C8E842743BEC10031FF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C8E832743BEC10031FF5F /* AppDelegate.swift */; };
 		5C6C8E862743BEC10031FF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C8E852743BEC10031FF5F /* SceneDelegate.swift */; };
-		5C6C8E882743BEC10031FF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C8E872743BEC10031FF5F /* ViewController.swift */; };
+		5C6C8E882743BEC10031FF5F /* CitiesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C8E872743BEC10031FF5F /* CitiesListVC.swift */; };
 		5C6C8E8B2743BEC20031FF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C8E892743BEC20031FF5F /* Main.storyboard */; };
 		5C6C8E8D2743BEF10031FF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C8E8C2743BEF10031FF5F /* Assets.xcassets */; };
 		5C6C8E902743BEF10031FF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C8E8E2743BEF10031FF5F /* LaunchScreen.storyboard */; };
@@ -28,6 +28,10 @@
 		5C85E1572743E05900EC7937 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E1562743E05900EC7937 /* CardView.swift */; };
 		5C85E15A2743E07B00EC7937 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E1592743E07B00EC7937 /* Storyboard.swift */; };
 		5C85E1672743EAEE00EC7937 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E1662743EAEE00EC7937 /* Helpers.swift */; };
+		5C85E170274440AE00EC7937 /* ForecastCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E16F274440AE00EC7937 /* ForecastCities.swift */; };
+		5C85E17427444CB100EC7937 /* CityForecastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E17327444CB100EC7937 /* CityForecastVC.swift */; };
+		5C85E17F2744523500EC7937 /* JF-Flat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C85E15C2743E13300EC7937 /* JF-Flat-Bold.ttf */; };
+		5C85E1812744523800EC7937 /* JF-Flat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C85E15D2743E13300EC7937 /* JF-Flat-Regular.ttf */; };
 		99930FC068477F47FF09E84D /* Pods_WeatherForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C060FAA170DAB4ADA3971572 /* Pods_WeatherForecast.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +41,7 @@
 		5C6C8E802743BEC10031FF5F /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6C8E832743BEC10031FF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C6C8E852743BEC10031FF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C6C8E872743BEC10031FF5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C6C8E872743BEC10031FF5F /* CitiesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListVC.swift; sourceTree = "<group>"; };
 		5C6C8E8A2743BEC20031FF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C6C8E8C2743BEF10031FF5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6C8E8F2743BEF10031FF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		5C85E15C2743E13300EC7937 /* JF-Flat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JF-Flat-Bold.ttf"; sourceTree = "<group>"; };
 		5C85E15D2743E13300EC7937 /* JF-Flat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JF-Flat-Regular.ttf"; sourceTree = "<group>"; };
 		5C85E1662743EAEE00EC7937 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		5C85E16F274440AE00EC7937 /* ForecastCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCities.swift; sourceTree = "<group>"; };
+		5C85E17327444CB100EC7937 /* CityForecastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecastVC.swift; sourceTree = "<group>"; };
 		C060FAA170DAB4ADA3971572 /* Pods_WeatherForecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherForecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,22 +169,22 @@
 		5C85E13E2743DED500EC7937 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5C6C8E8E2743BEF10031FF5F /* LaunchScreen.storyboard */,
 				5C85E15C2743E13300EC7937 /* JF-Flat-Bold.ttf */,
 				5C85E15D2743E13300EC7937 /* JF-Flat-Regular.ttf */,
-				5C6C8E892743BEC20031FF5F /* Main.storyboard */,
 				5C6C8E8C2743BEF10031FF5F /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		5C85E13F2743DF1100EC7937 /* Cities */ = {
+		5C85E13F2743DF1100EC7937 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
 				5C85E1422743DF5900EC7937 /* Presenter */,
 				5C85E1412743DF5300EC7937 /* View */,
 				5C85E1402743DF4C00EC7937 /* Model */,
 			);
-			path = Cities;
+			path = Forecast;
 			sourceTree = "<group>";
 		};
 		5C85E1402743DF4C00EC7937 /* Model */ = {
@@ -191,8 +197,9 @@
 		5C85E1412743DF5300EC7937 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5C6C8E872743BEC10031FF5F /* ViewController.swift */,
-				5C6C8E8E2743BEF10031FF5F /* LaunchScreen.storyboard */,
+				5C6C8E872743BEC10031FF5F /* CitiesListVC.swift */,
+				5C85E17327444CB100EC7937 /* CityForecastVC.swift */,
+				5C6C8E892743BEC20031FF5F /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				5C85E1442743DFB300EC7937 /* UserDefaultService.swift */,
+				5C85E16F274440AE00EC7937 /* ForecastCities.swift */,
 			);
 			path = "Storage Layer";
 			sourceTree = "<group>";
@@ -247,7 +255,7 @@
 		5C85E16B274406E000EC7937 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
-				5C85E13F2743DF1100EC7937 /* Cities */,
+				5C85E13F2743DF1100EC7937 /* Forecast */,
 			);
 			path = "UI Layer";
 			sourceTree = "<group>";
@@ -313,7 +321,9 @@
 			files = (
 				5C6C8E902743BEF10031FF5F /* LaunchScreen.storyboard in Resources */,
 				5C6C8E8D2743BEF10031FF5F /* Assets.xcassets in Resources */,
+				5C85E17F2744523500EC7937 /* JF-Flat-Bold.ttf in Resources */,
 				5C6C8E8B2743BEC20031FF5F /* Main.storyboard in Resources */,
+				5C85E1812744523800EC7937 /* JF-Flat-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6C8E882743BEC10031FF5F /* ViewController.swift in Sources */,
+				5C6C8E882743BEC10031FF5F /* CitiesListVC.swift in Sources */,
 				5C85E13B2743DDD000EC7937 /* URLManager.swift in Sources */,
 				5C6C8E842743BEC10031FF5F /* AppDelegate.swift in Sources */,
 				5C85E15A2743E07B00EC7937 /* Storyboard.swift in Sources */,
@@ -380,7 +390,9 @@
 				5C85E1502743E01400EC7937 /* UIColorExtension.swift in Sources */,
 				5C85E1542743E01400EC7937 /* AppFont.swift in Sources */,
 				5C85E1672743EAEE00EC7937 /* Helpers.swift in Sources */,
+				5C85E170274440AE00EC7937 /* ForecastCities.swift in Sources */,
 				5C85E1452743DFB300EC7937 /* UserDefaultService.swift in Sources */,
+				5C85E17427444CB100EC7937 /* CityForecastVC.swift in Sources */,
 				5C85E1352743DDA300EC7937 /* ServiceManager.swift in Sources */,
 				5C85E1572743E05900EC7937 /* CardView.swift in Sources */,
 				5C85E1532743E01400EC7937 /* AppFontSizes.swift in Sources */,
