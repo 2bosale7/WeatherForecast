@@ -6,17 +6,35 @@
 //
 
 import UIKit
+import IQKeyboardManager
+import Alamofire
+
+var isNetworkReachable = NetworkReachability.shared.isReachable
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //MARK:- Keyboard
+        IQKeyboardManager.shared().isEnabled = true
+        
+        //MARK:- Network Manager
+        NetworkReachability.shared.startListening()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.checkInternetStatus(notification:)), name: Notification.Name("notifyIntetnetStatus"), object: nil)
+        
         return true
     }
 
+    @objc func checkInternetStatus(notification: Notification) {
+        let isConeected = notification.object as? Bool ?? false
+        if isConeected {
+            isNetworkReachable = true
+        }else{
+            isNetworkReachable = false
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

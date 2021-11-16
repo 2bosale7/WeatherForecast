@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.2.2)
+  - IQKeyboardManager (6.5.6)
+  - ReachabilitySwift (5.0.0)
+  - SnapKit (5.0.1)
+  - SwiftEmptyState (0.1.7):
+    - SnapKit
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - IQKeyboardManager (~> 6.5)
+  - ReachabilitySwift (~> 5.0)
+  - SwiftEmptyState
+  - SwiftyJSON (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - ReachabilitySwift
+    - SnapKit
+    - SwiftEmptyState
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftEmptyState: 54f1f6ef8c52a4c2b777aa44c816f77a4e07e2fe
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: ddf3c43e88b19286307764aeaaff492e4eaf3b2b
+
+COCOAPODS: 1.8.4
