@@ -9,7 +9,7 @@ import Foundation
 
 extension URLManager {
     
-    func getCityForecastURL(_ city:Cities) -> String {
-        return "\(getCurrentBaseUrl())/\(city.cityID)"
+    func getCityForecastURL(_ id:Int) -> String {
+        return "\(getCurrentBaseUrl())/\(id)"
     }
 }
