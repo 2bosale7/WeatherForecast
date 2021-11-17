@@ -223,13 +223,66 @@
                                             <outlet property="weatherStatusLbl" destination="V4R-wy-ukv" id="B21-uP-yhA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bID-AN-RYy">
-                                        <rect key="frame" x="0.0" y="445" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityForecastOtherDaysCell" rowHeight="106" id="bID-AN-RYy" customClass="CityForecastOtherDaysCell" customModule="WeatherForecast" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="445" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bID-AN-RYy" id="W6G-c1-GnY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0mU-qa-zA9">
+                                                    <rect key="frame" x="8" y="8" width="398" height="90"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-IF-hTi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="41"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAa-Xd-sHI" userLabel="Date">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="41"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a0e-f1-zXv">
+                                                            <rect key="frame" x="0.0" y="49" width="398" height="41"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLv-ZQ-yhn" userLabel="Date">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="132.5" height="41"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-mo-D4A" userLabel="Date">
+                                                                    <rect key="frame" x="132.5" y="0.0" width="133" height="41"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWC-V7-jSa" userLabel="Date">
+                                                                    <rect key="frame" x="265.5" y="0.0" width="132.5" height="41"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0mU-qa-zA9" firstAttribute="top" secondItem="W6G-c1-GnY" secondAttribute="top" constant="8" id="C8E-Qf-ikf"/>
+                                                <constraint firstAttribute="trailing" secondItem="0mU-qa-zA9" secondAttribute="trailing" constant="8" id="Yj3-yw-GBN"/>
+                                                <constraint firstItem="0mU-qa-zA9" firstAttribute="leading" secondItem="W6G-c1-GnY" secondAttribute="leading" constant="8" id="aX2-0Z-xCo"/>
+                                                <constraint firstAttribute="bottom" secondItem="0mU-qa-zA9" secondAttribute="bottom" constant="8" id="lHk-jL-g3a"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="max" destination="SLv-ZQ-yhn" id="urv-sp-yGV"/>
+                                            <outlet property="min" destination="uW4-mo-D4A" id="hNz-tF-aaJ"/>
+                                            <outlet property="mph" destination="TWC-V7-jSa" id="hak-3i-8dJ"/>
+                                            <outlet property="weatherDate" destination="fAa-Xd-sHI" id="URb-P4-oiN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

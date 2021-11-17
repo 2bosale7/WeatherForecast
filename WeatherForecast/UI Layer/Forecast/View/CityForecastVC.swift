@@ -101,12 +101,19 @@ extension CityForecastVC: UITableViewDelegate {
             cell.configCell(forecast: cityForecast[indexPath.row], cityName: cityName)
             return cell
         }else{
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CityForecastOtherDaysCell", for: indexPath) as! CityForecastOtherDaysCell
+            cell.configCell(forecast: cityForecast[indexPath.row])
+            return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 420
+        if indexPath.row == 0 {
+            return 420
+        }else{
+            return 100
+        }
+        
     }
 }
 
