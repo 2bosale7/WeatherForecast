@@ -29,7 +29,7 @@ class CityForecastVC: ParentViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if UserDefaultService.sharedInstance.isFirstTimeUser {
-            performSegue(withIdentifier: "toCitiesListVC", sender: nil)
+            performSegue(withIdentifier: "toCitiesListVC", sender: self)
         }else{
             getCityWeatherForecast()
         }
@@ -55,6 +55,11 @@ class CityForecastVC: ParentViewController {
 
     }
     
+    @IBAction func changeCity(_ sender: UIButton) {
+        performSegue(withIdentifier: "toCitiesListVC", sender: self)
+    }
+    
+    
     @objc func checkInternetStatus(notification: Notification) {
         let isConeected = notification.object as? Bool ?? false
         if isConeected {
@@ -74,6 +79,13 @@ class CityForecastVC: ParentViewController {
     
     func reloadScreen (button:UIButton) {
         getCityWeatherForecast()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCitiesListVC" {
+            let dest = segue.destination as! CitiesListVC
+            dest.changeCityDelegate = self
+        }
     }
     
 }
@@ -100,4 +112,10 @@ extension CityForecastVC: UITableViewDelegate {
 
 extension CityForecastVC: UITableViewDataSource {
     
+}
+
+extension CityForecastVC: ChangeCityDelegate {
+    func cityChanged() {
+        getCityWeatherForecast()
+    }
 }

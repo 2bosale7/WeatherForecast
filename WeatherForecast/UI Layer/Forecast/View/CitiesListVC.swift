@@ -7,13 +7,18 @@
 
 import UIKit
 
+protocol ChangeCityDelegate: NSObject {
+    func cityChanged()
+}
+
 class CitiesListVC: ParentViewController {
     
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var citiesTV: UITableView!
     
-
+    weak var changeCityDelegate: ChangeCityDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         citiesTV.delegate = self
@@ -55,6 +60,7 @@ extension CitiesListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cityID = Cities.allCases[indexPath.row].cityID
         UserDefaultService.sharedInstance.defaultCityID = cityID
+        changeCityDelegate?.cityChanged()
         dismiss(animated: true, completion: nil)
     }
 }
