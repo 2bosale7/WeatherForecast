@@ -67,9 +67,9 @@ class CityForecastTodayTopCell: UITableViewCell {
         weatherDate.font = AppFont().largeBoldSize
         weatherStatusLbl.font = AppFont().xLargeBoldSize
         
-        max.font = AppFont().largeSize
-        min.font = AppFont().largeSize
-        mph.font = AppFont().largeSize
+        max.font = AppFont().largeBoldSize
+        min.font = AppFont().largeBoldSize
+        mph.font = AppFont().largeBoldSize
         
         humidityTitle.font = AppFont().xLargeBoldSize
         humidityValue.font = AppFont().largeSize
