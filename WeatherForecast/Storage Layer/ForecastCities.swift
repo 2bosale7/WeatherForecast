@@ -10,6 +10,7 @@ import Foundation
 
 enum Cities: String, CaseIterable {
     case cairo = "Cairo"
+    case alexandria = "Alexandria"
     case riyadh = "Riyadh"
     case newYork = "New York"
     
@@ -21,6 +22,8 @@ enum Cities: String, CaseIterable {
                 return 1939753
             case .newYork:
                 return 2459115
+            case .alexandria:
+                return 1522006
         }
     }
 }

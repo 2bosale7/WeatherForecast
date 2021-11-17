@@ -85,6 +85,10 @@ class CityForecastVC: ParentViewController {
         if segue.identifier == "toCitiesListVC" {
             let dest = segue.destination as! CitiesListVC
             dest.changeCityDelegate = self
+        }else if segue.identifier == "toCityDayForecast" {
+            let dayforecast = sender as! Forecast
+            let dest = segue.destination as! CityDayForecastVC
+            dest.forecast = dayforecast
         }
     }
     
@@ -118,7 +122,11 @@ extension CityForecastVC: UITableViewDelegate {
 }
 
 extension CityForecastVC: UITableViewDataSource {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row != 0 {
+            performSegue(withIdentifier: "toCityDayForecast", sender: cityForecast[indexPath.row])
+        }
+    }
 }
 
 extension CityForecastVC: ChangeCityDelegate {
