@@ -24,7 +24,7 @@ extension Date {
 }
 
 extension String {
-    func getDateFromString(format:String =  "yyyy-MM-dd'T'HH:mm:ssZ") -> Date? {
+    func getDateFromString(format:String =  "yyyy-MM-dd") -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = format

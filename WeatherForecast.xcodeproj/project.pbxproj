@@ -35,6 +35,7 @@
 		5C85E1852744662100EC7937 /* CityForecastTodayTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E1842744662100EC7937 /* CityForecastTodayTopCell.swift */; };
 		5C85E18927446F6E00EC7937 /* CityForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E18827446F6E00EC7937 /* CityForecastPresenter.swift */; };
 		5C85E18C274470C500EC7937 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E18B274470C500EC7937 /* Forecast.swift */; };
+		5C85E1A02745190A00EC7937 /* CityForecastOtherDaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85E19F2745190A00EC7937 /* CityForecastOtherDaysCell.swift */; };
 		99930FC068477F47FF09E84D /* Pods_WeatherForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C060FAA170DAB4ADA3971572 /* Pods_WeatherForecast.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		5C85E1842744662100EC7937 /* CityForecastTodayTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecastTodayTopCell.swift; sourceTree = "<group>"; };
 		5C85E18827446F6E00EC7937 /* CityForecastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecastPresenter.swift; sourceTree = "<group>"; };
 		5C85E18B274470C500EC7937 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		5C85E19F2745190A00EC7937 /* CityForecastOtherDaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecastOtherDaysCell.swift; sourceTree = "<group>"; };
 		C060FAA170DAB4ADA3971572 /* Pods_WeatherForecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherForecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				5C85E1842744662100EC7937 /* CityForecastTodayTopCell.swift */,
+				5C85E19F2745190A00EC7937 /* CityForecastOtherDaysCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				5C85E1342743DDA300EC7937 /* NetworkReachability.swift in Sources */,
 				5C85E1502743E01400EC7937 /* UIColorExtension.swift in Sources */,
 				5C85E1542743E01400EC7937 /* AppFont.swift in Sources */,
+				5C85E1A02745190A00EC7937 /* CityForecastOtherDaysCell.swift in Sources */,
 				5C85E18C274470C500EC7937 /* Forecast.swift in Sources */,
 				5C85E1672743EAEE00EC7937 /* Helpers.swift in Sources */,
 				5C85E170274440AE00EC7937 /* ForecastCities.swift in Sources */,

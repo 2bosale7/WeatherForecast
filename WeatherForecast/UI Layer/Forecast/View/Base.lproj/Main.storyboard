@@ -77,15 +77,21 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KVq-aF-XV4">
-                                                    <rect key="frame" x="167" y="53" width="80" height="74.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu1-Xi-Sks">
+                                                    <rect key="frame" x="362" y="16" width="36" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KVq-aF-XV4">
+                                                    <rect key="frame" x="177" y="50" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="uYc-wS-ESA"/>
-                                                        <constraint firstAttribute="width" constant="80" id="yFw-nW-MSt"/>
+                                                        <constraint firstAttribute="height" constant="60" id="uYc-wS-ESA"/>
+                                                        <constraint firstAttribute="width" constant="60" id="yFw-nW-MSt"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heavy Cloud" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4R-wy-ukv">
-                                                    <rect key="frame" x="158.5" y="130" width="97" height="20.5"/>
+                                                    <rect key="frame" x="158.5" y="118" width="97" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -168,6 +174,7 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Eu1-Xi-Sks" secondAttribute="trailing" constant="16" id="4uS-FA-16B"/>
                                                 <constraint firstItem="sCr-Fo-PNg" firstAttribute="top" secondItem="tne-Ka-uqF" secondAttribute="top" id="6hx-8h-DYp"/>
                                                 <constraint firstAttribute="bottom" secondItem="knh-hT-xxN" secondAttribute="bottom" id="AGb-RM-Aaw"/>
                                                 <constraint firstAttribute="trailing" secondItem="knh-hT-xxN" secondAttribute="trailing" id="CaG-Hf-rF0"/>
@@ -180,8 +187,9 @@
                                                 <constraint firstItem="KVq-aF-XV4" firstAttribute="centerX" secondItem="5tM-ia-G97" secondAttribute="centerX" id="PBR-AI-mXK"/>
                                                 <constraint firstItem="KVq-aF-XV4" firstAttribute="centerX" secondItem="V4R-wy-ukv" secondAttribute="centerX" id="SJ9-BO-uZD"/>
                                                 <constraint firstItem="sCq-al-bgo" firstAttribute="top" secondItem="5tM-ia-G97" secondAttribute="top" constant="16" id="YAR-44-pAh"/>
+                                                <constraint firstItem="Eu1-Xi-Sks" firstAttribute="top" secondItem="sCq-al-bgo" secondAttribute="top" id="dUr-dg-nnL"/>
                                                 <constraint firstItem="sCq-al-bgo" firstAttribute="leading" secondItem="5tM-ia-G97" secondAttribute="leading" constant="16" id="eBe-OQ-x08"/>
-                                                <constraint firstItem="V4R-wy-ukv" firstAttribute="top" secondItem="KVq-aF-XV4" secondAttribute="bottom" id="fPd-t4-yt5"/>
+                                                <constraint firstItem="V4R-wy-ukv" firstAttribute="top" secondItem="KVq-aF-XV4" secondAttribute="bottom" constant="8" id="fPd-t4-yt5"/>
                                                 <constraint firstItem="sCr-Fo-PNg" firstAttribute="width" secondItem="tne-Ka-uqF" secondAttribute="width" id="faP-Qg-RMf"/>
                                                 <constraint firstItem="knh-hT-xxN" firstAttribute="leading" secondItem="5tM-ia-G97" secondAttribute="leading" id="hNP-wv-HJn"/>
                                                 <constraint firstItem="knh-hT-xxN" firstAttribute="top" secondItem="5tM-ia-G97" secondAttribute="top" id="nlL-WE-yIW"/>
@@ -207,6 +215,7 @@
                                             <outlet property="pressureValue" destination="RC7-PF-vKy" id="fGu-fh-dAw"/>
                                             <outlet property="visibilityTitle" destination="6o9-PH-u1K" id="6fP-Rt-JE4"/>
                                             <outlet property="visibilityValue" destination="XWT-5K-quo" id="Cq6-CH-kgA"/>
+                                            <outlet property="weatherDate" destination="Eu1-Xi-Sks" id="CLY-F5-8c4"/>
                                             <outlet property="weatherStatusIcon" destination="KVq-aF-XV4" id="DvD-P9-n4Z"/>
                                             <outlet property="weatherStatusLbl" destination="V4R-wy-ukv" id="B21-uP-yhA"/>
                                         </connections>
@@ -334,7 +343,6 @@
     <resources>
         <image name="bg" width="3000" height="1947"/>
         <image name="chevron.down.circle" catalog="system" width="128" height="121"/>
-        <image name="cloud.fill" catalog="system" width="128" height="84"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

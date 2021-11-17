@@ -14,7 +14,7 @@ class URLManager {
     
     let apiAccessKey = "Authorization"
     let apiAccessKeyValue = "Bearer "
-    let forecastIconsBaseURL = "https://www.metaweather.com/static/img/weather/png/64"
+    let forecastIconsBaseURL = "https://www.metaweather.com/static/img/weather/png/64/"
     
     private let currentWorkingEnvironment = AppEnvironments.production
     

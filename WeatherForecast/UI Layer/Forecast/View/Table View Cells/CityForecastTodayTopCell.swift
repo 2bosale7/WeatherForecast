@@ -11,6 +11,8 @@ class CityForecastTodayTopCell: UITableViewCell {
     
     @IBOutlet weak var cityNameCardView: CardView!
     @IBOutlet weak var cityName: UIButton!
+    @IBOutlet weak var weatherDate: UILabel!
+    
     
     @IBOutlet weak var weatherStatusIcon: UIImageView!
     @IBOutlet weak var weatherStatusLbl: UILabel!
@@ -41,31 +43,45 @@ class CityForecastTodayTopCell: UITableViewCell {
         weatherStatusLbl.text = forecast.weather_state_name
         max.text = "Max: " + String(Int(forecast.max_temp)) + "º C"
         min.text = "Min: " + String(Int(forecast.min_temp)) + "º C"
+        mph.text = String(Int(forecast.wind_speed)) + "mph"
+        
+        humidityValue.text = String(forecast.humidity) + "%"
+        visibilityValue.text = String(format: "%.1f", forecast.visibility) + " miles"
+        pressureValue.text = String(Int(forecast.air_pressure)) + "mb"
+        confidenceValue.text = String(forecast.predictability) + "%"
+        weatherDate.text = "Today"
+        
+        let strURL = URLManager().forecastIconsBaseURL + "\(forecast.weather_state_abbr!).png"
+        if let imageURL = NSURL(string: strURL) {
+            let imagedData = NSData(contentsOf: imageURL as URL)!
+            weatherStatusIcon.image = UIImage(data: imagedData as Data)
+        }
+        
     }
     
     private func updateUI() {
         cityNameCardView.layer.borderWidth = 1
         cityNameCardView.layer.borderColor = UIColor.white.cgColor
         cityName.setTitleColor(.white, for: .normal)
-        cityName.titleLabel?.font = AppFont().largeBoldSize
+        cityName.titleLabel?.font = AppFont().xLargeBoldSize
+        weatherDate.font = AppFont().largeBoldSize
+        weatherStatusLbl.font = AppFont().xLargeBoldSize
         
-        weatherStatusLbl.font = AppFont().largeSize
+        max.font = AppFont().largeSize
+        min.font = AppFont().largeSize
+        mph.font = AppFont().largeSize
         
-        max.font = AppFont().normalSize
-        min.font = AppFont().normalSize
-        mph.font = AppFont().normalSize
+        humidityTitle.font = AppFont().xLargeBoldSize
+        humidityValue.font = AppFont().largeSize
         
-        humidityTitle.font = AppFont().normalBoldSize
-        humidityValue.font = AppFont().normalSize
+        visibilityTitle.font = AppFont().xLargeBoldSize
+        visibilityValue.font = AppFont().largeSize
         
-        visibilityTitle.font = AppFont().normalBoldSize
-        visibilityValue.font = AppFont().normalSize
+        pressureTitle.font = AppFont().xLargeBoldSize
+        pressureValue.font = AppFont().largeSize
         
-        pressureTitle.font = AppFont().normalBoldSize
-        pressureValue.font = AppFont().normalSize
-        
-        confidenceTitle.font = AppFont().normalBoldSize
-        confidenceValue.font = AppFont().normalSize
+        confidenceTitle.font = AppFont().xLargeBoldSize
+        confidenceValue.font = AppFont().largeSize
         
     }
 }
