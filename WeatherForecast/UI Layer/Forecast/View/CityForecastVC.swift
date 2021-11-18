@@ -24,6 +24,16 @@ class CityForecastVC: ParentViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkInternetStatus(notification:)), name: Notification.Name("notifyIntetnetStatus"), object: nil)
         
+        #if DEV
+            self.showAlert(title: "You are in Development Environment", message: "", shouldpop: false)
+        #elseif TEST
+            self.showAlert(title: "You are in Testing Environment", message: "", shouldpop: false)
+        #else
+            self.showAlert(title: "You are in Production Environment", message: "", shouldpop: false)
+        #endif
+        
+        
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {

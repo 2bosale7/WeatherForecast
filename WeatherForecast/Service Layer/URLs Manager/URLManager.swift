@@ -7,7 +7,7 @@
 
 import Foundation
 enum AppEnvironments {
-    case development, production
+    case development, testing, production
 }
 
 class URLManager {
@@ -16,7 +16,15 @@ class URLManager {
     let apiAccessKeyValue = "Bearer "
     let forecastIconsBaseURL = "https://www.metaweather.com/static/img/weather/png/64/"
     
-    private let currentWorkingEnvironment = AppEnvironments.production
+    #if DEV
+        let currentWorkingEnvironment: AppEnvironments = .development
+    #elseif TEST
+        let currentWorkingEnvironment: AppEnvironments = .testing
+    #else
+        let currentWorkingEnvironment: AppEnvironments = .production
+    #endif
+    
+    
     
     private var developmentServerBaseURL:String
     {
